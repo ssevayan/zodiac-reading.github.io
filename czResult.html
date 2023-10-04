@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chinese Zodiac Result</title>
+    <link rel="stylesheet" href="resources\css\desktop\czResult.css">
+    <link rel="stylesheet" href="resources\css\phone\czResult.css">
+    <link rel="stylesheet" href="resources\css\tablet\czResult.css">
+    <link rel="stylesheet" href="resources\css\laptop\czResult.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mooli&display=swap" rel="stylesheet">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const resultElement = document.getElementById("result");
+    
+            // Retrieve query parameters from the URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const name = urlParams.get("name");
+            const zodiacSign = urlParams.get("zodiacSign");
+            const zodiacDescription = urlParams.get("zodiacDescription");
+    
+            if (name && zodiacSign && zodiacDescription) {
+                const resultText = `${name}, your Chinese zodiac sign is the ${zodiacSign}.<br>${zodiacDescription}`;
+                resultElement.innerHTML = resultText;
+            
+                // Determine which background image to use based on the result
+                let backgroundImageClass = "default-background"; // Default background
+                if (zodiacSign === "Rat") {
+                    backgroundImageClass = "rat-background";
+                } else if (zodiacSign === "Ox") {
+                    backgroundImageClass = "ox-background";
+                } else if (zodiacSign === "Tiger") {
+                    backgroundImageClass = "tiger-background";
+                } else if (zodiacSign === "Rabbit") {
+                    backgroundImageClass = "rabbit-background";
+                } else if (zodiacSign === "Dragon") {
+                    backgroundImageClass = "dragon-background";
+                } else if (zodiacSign === "Snake") {
+                    backgroundImageClass = "snake-background";
+                } else if (zodiacSign === "Horse") {
+                    backgroundImageClass = "horse-background";
+                } else if (zodiacSign === "Goat") {
+                    backgroundImageClass = "goat-background";
+                } else if (zodiacSign === "Monkey") {
+                    backgroundImageClass = "monkey-background";
+                } else if (zodiacSign === "Rooster") {
+                    backgroundImageClass = "rooster-background";
+                } else if (zodiacSign === "Dog") {
+                    backgroundImageClass = "dog-background";
+                } else if (zodiacSign === "Pig") {
+                    backgroundImageClass = "pig-background";
+                }
+
+                // Apply the appropriate background image class to the body element
+                document.body.className = backgroundImageClass;
+            } else {
+                resultElement.innerHTML = "Invalid input. Please try again.";
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="top">
+        <div class="title">
+            <span>Chinese Zodiac Result</span>
+        </div>
+        <div class="buttons">
+            <button><a href='index.html'>Home Page</a></button>
+            <button><a href='chinese-zodiac-relationship.html'>Chinese Zodiac Sign Relationships Reading</a></button>
+            <button><a href='star-sign.html'>Star Sign Reading</a></button>
+            <button><a href='star-sign-relationship.html'>Star Sign Relationships Reading</a></button>
+            <button><a href='fortune-telling.html'>Fortune telling</a></button>
+        </div>
+    </div>
+
+    <div class="result">
+        <div id="result"></div>
+        <button><a href='chinese-zodiac.html'>Read Again</a></button>
+    </div>
+
+    
+</body>
+</html>

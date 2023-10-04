@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chinese Zodiac Relationships Result</title>
+    <link rel="stylesheet" href="resources\css\desktop\ssrResult.css">
+    <link rel="stylesheet" href="resources\css\phone\ssrResult.css">
+    <link rel="stylesheet" href="resources\css\tablet\ssrResult.css">
+    <link rel="stylesheet" href="resources\css\laptop\ssrResult.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mooli&display=swap" rel="stylesheet">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Function to get query parameter by name from the URL
+            function getQueryParam(name) {
+                const urlParams = new URLSearchParams(window.location.search);
+                return urlParams.get(name);
+            }
+
+            // Get query parameters from the URL
+            const name1 = getQueryParam("name1");
+            const sign1 = getQueryParam("sign1");
+            const name2 = getQueryParam("name2");
+            const sign2 = getQueryParam("sign2");
+            const relationshipResult = getQueryParam("relationshipResult");
+
+            // Display the relationship information on the page
+            const resultElement = document.getElementById("result");
+            resultElement.innerHTML = `The relationship between ${name1} (${sign1}) and ${name2} (${sign2}) is: <br> ${relationshipResult}`;
+        });
+    </script>
+</head>
+
+<body>
+    <div class="top">
+        <div class="title">
+            <span>Star Sign Relationships Result</span>
+        </div>
+        <div class="buttons">
+            <button><a href='index.html'>Home Page</a></button>
+            <button><a href='chinese-zodiac.html'>Chinese Zodiac Sign Reading</a></button>
+            <button><a href='chinese-zodiac-relationship.html'>Chinese Zodiac Sign Relationships Reading</a></button>
+            <button><a href='star-sign.html'>Star Sign Reading</a></button>
+            <button><a href='fortune-telling.html'>Fortune telling</a></button>
+        </div>
+    </div>
+
+    <div class="result">
+        <div id="result"></div>
+        <button><a href='star-sign-relationship.html'>Read Again</a></button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,173 @@
+@media only screen and (min-width: 600px) and (max-width: 999px){
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed; /* Fixed background */
+    }
+    
+    .top {
+        margin-top: 2%;
+        margin-right: 2%;
+        margin-left: 2%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .top .buttons {
+        display: flex;
+        justify-content:center;
+    }
+    
+    .buttons button {
+        margin: 13px 3px;
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
+        background-color: rgb(138, 26, 26);
+    }
+    
+    .top button a {
+        font-size: 16px;
+        text-decoration: none;
+        font-family:'Mooli', sans-serif;
+        color:rgb(255, 251, 141);
+        font-weight: 700;
+    }
+    
+    .buttons button:hover {
+        background-color: rgb(187, 39, 39);
+    }
+    
+    .top .title {
+        display: flex;
+        justify-content:center;
+        margin: 5px;
+        padding: 10px 10px;
+        font-family:'Mooli', sans-serif;
+    }
+    
+    .title span {
+        font-size: 25px;
+        font-weight: 800;
+        color:rgb(253, 167, 96);
+    }
+    
+    .result {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(250, 179, 128, 0.798);
+        margin-top: 5%;
+        margin-bottom: 5%;
+        margin-left: 10%;
+        margin-right: 10%;
+        padding-top: 5%;
+        padding-bottom: 3%;
+        padding-left: 2%;
+        padding-right: 2%;
+        border-radius: 10px;
+        box-shadow: 5px 5px 5px rgb(128, 83, 51);
+        font-weight: 600;
+        font-family:'Mooli', sans-serif;
+        font-size: 18px;
+        color:rgb(34, 1, 1);
+        word-spacing: 3px;
+    }
+    
+    .result button {
+        margin-top: 20px;
+        padding: 8px;
+        border-radius: 7px;
+        border: none;
+        background-color: rgb(232, 200, 156);
+        font-weight: 600;
+        font-family:'Mooli', sans-serif;
+        font-size: 18px;
+    }
+    
+    .result button:hover {
+        background-color: rgb(244, 216, 182);
+    }
+    
+    .result button a {
+        text-decoration: none;
+        color:rgb(34, 1, 1);
+    }
+    
+    #result {
+        line-height:30px;
+    }
+    
+    .default-background {
+        background-image: url('../../media/images/job549-hein-color-018.jpg');
+    }
+    
+    .rat-background {
+        background-image: url('../../media/images/rat.jpg');
+        /* Additional background styles */
+    }
+    
+    .ox-background {
+        background-image: url('../../media/images/ox.jpg');
+        /* Additional background styles */
+    }
+    
+    .tiger-background {
+        background-image: url('../../media/images/tiger.jpg');
+        /* Additional background styles */
+    }
+    
+    .rabbit-background {
+        background-image: url('../../media/images/rabbit.jpg');
+        /* Additional background styles */
+    }
+    
+    .dragon-background {
+        background-image: url('../../media/images/dragon.jpg');
+        /* Additional background styles */
+    }
+    
+    .snake-background {
+        background-image: url('../../media/images/snake.jpg');
+        /* Additional background styles */
+    }
+    
+    .horse-background {
+        background-image: url('../../media/images/horse.jpg');
+        /* Additional background styles */
+    }
+    
+    .goat-background {
+        background-image: url('../../media/images/goat.jpg');
+        /* Additional background styles */
+    }
+    
+    .monkey-background {
+        background-image: url('../../media/images/monkey.jpg');
+        /* Additional background styles */
+    }
+    
+    .rooster-background {
+        background-image: url('../../media/images/rooster.jpg');
+        /* Additional background styles */
+    }
+    
+    .dog-background {
+        background-image: url('../../media/images/dog.jpg');
+        /* Additional background styles */
+    }
+    
+    .pig-background {
+        background-image: url('../../media/images/pig.jpg');
+        /* Additional background styles */
+    }
+}
+
+

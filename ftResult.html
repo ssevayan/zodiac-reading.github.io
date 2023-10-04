@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Sign Result</title>
+    <link rel="stylesheet" href="resources\css\desktop\ftResult.css">
+    <link rel="stylesheet" href="resources\css\phone\ftResult.css">
+    <link rel="stylesheet" href="resources\css\tablet\ftResult.css">
+    <link rel="stylesheet" href="resources\css\laptop\ftResult.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mooli&display=swap" rel="stylesheet">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const resultElement = document.getElementById("result");
+    
+             // Retrieve data from URL parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            const name = urlParams.get('name');
+            const description = decodeURIComponent(urlParams.get('description'));
+    
+            if (name && description) {
+                const resultText = `<p>Dear ${name},</p><p>${description}</p>`;
+                resultElement.innerHTML = resultText;
+            } else {
+                resultElement.innerHTML = "Invalid input. Please try again.";
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <div class="top">
+        <div class="title">
+            <span>Fortune Telling Result</span>
+        </div>
+        <div class="buttons">
+            <button><a href='index.html'>Home Page</a></button>
+            <button><a href='chinese-zodiac.html'>Chinese Zodiac Sign Reading</a></button>
+            <button><a href='chinese-zodiac-relationship.html'>Chinese Zodiac Sign Relationships Reading</a></button>
+            <button><a href='star-sign.html'>Star Sign Reading</a></button>
+            <button><a href='star-sign-relationship.html'>Star Sign Relationships Reading</a></button>
+        </div>
+    </div>
+
+    <div class="result">
+        <div id="result"></div>
+        <button><a href='fortune-telling.html'>Give it another try!</a></button>
+    </div>  
+
+</body>
+</html>

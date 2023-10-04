@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("../../media/images/czrResultBackG.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed; /* Fixed background */
+}
+
+.top {
+    margin-top: 2%;
+    margin-right: 1%;
+    margin-left: 1%;
+    display: flex;
+    justify-content:space-between;
+}
+
+.top .buttons {
+    display: flex;
+    justify-content:flex-end;
+}
+
+.buttons button {
+    margin: 10px 3px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(138, 26, 121);
+}
+
+.top button a {
+    font-size: 16px;
+    text-decoration: none;
+    font-family:'Mooli', sans-serif;
+    color:rgb(255, 251, 141);
+    font-weight: 700;
+}
+
+.buttons button:hover {
+    background-color: rgb(187, 39, 175);
+}
+
+.top .title {
+    display: flex;
+    justify-content:flex-start;
+    margin: 5px;
+    padding: 10px 10px;
+    font-family:'Mooli', sans-serif;
+}
+
+.title span {
+    font-size: 25px;
+    font-weight: 900;
+    color:rgb(116, 8, 162);
+}
+
+.result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 216, 248, 0.708);
+    margin-top: 8%;
+    margin-bottom: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-top: 5%;
+    padding-bottom: 3%;
+    padding-left: 2%;
+    padding-right: 2%;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgb(161, 85, 163);
+    font-weight: 600;
+    font-family:'Mooli', sans-serif;
+    font-size: 20px;
+    color:rgb(18, 2, 35);
+    word-spacing: 3px;
+}
+
+.result button {
+    margin-top: 30px;
+    padding: 8px;
+    border-radius: 7px;
+    border: none;
+    background-color: rgb(138, 26, 121);
+    font-weight: 600;
+    font-family:'Mooli', sans-serif;
+    font-size: 18px;
+}
+
+.result button:hover {
+    background-color: rgb(187, 39, 175);
+}
+
+.result button a {
+    text-decoration: none;
+    color:rgb(255, 251, 141);
+}
+
+#result {
+    line-height:30px;
+}

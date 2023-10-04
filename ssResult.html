@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Sign Result</title>
+    <link rel="stylesheet" href="resources\css\desktop\ssResult.css">
+    <link rel="stylesheet" href="resources\css\phone\ssResult.css">
+    <link rel="stylesheet" href="resources\css\tablet\ssResult.css">
+    <link rel="stylesheet" href="resources\css\laptop\ssResult.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mooli&display=swap" rel="stylesheet">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const resultElement = document.getElementById("result");
+    
+             // Retrieve data from URL parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            const name = urlParams.get('name');
+            const zodiacSign = urlParams.get('zodiacSign');
+            const description = decodeURIComponent(urlParams.get('description'));
+    
+            if (name && zodiacSign && description) {
+                const resultText = `<p>${name}, your zodiac sign is ${zodiacSign}</p><p>${description}</p>`;
+                resultElement.innerHTML = resultText;
+
+                const zodiacSigns = {
+                    Aries: 'resources/media/images/aries.jpg',
+                    Taurus: 'resources/media/images/taurus.jpg',
+                    Gemini: 'resources/media/images/gemini.jpg',
+                    Cancer: 'resources/media/images/cancer.jpg',
+                    Leo: 'resources/media/images/leo.jpg',
+                    Virgo: 'resources/media/images/virgo.jpg',
+                    Libra: 'resources/media/images/libra.jpg',
+                    Scorpio: 'resources/media/images/scorpio.jpg',
+                    Sagittarius: 'resources/media/images/sagittarius.jpg',
+                    Capricorn: 'resources/media/images/capricorn.jpg',
+                    Aquarius: 'resources/media/images/aquarius.jpg',
+                    Pisces: 'resources/media/images/pisces.jpg'
+                };
+
+                //Set background image based on the zodiac sign
+                document.body.style.backgroundImage = `url('${zodiacSigns[zodiacSign]}')`;
+            
+            } else {
+                resultElement.innerHTML = "Invalid input. Please try again.";
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <div class="top">
+        <div class="title">
+            <span>Star Sign Result</span>
+        </div>
+        <div class="buttons">
+            <button><a href='index.html'>Home Page</a></button>
+            <button><a href='chinese-zodiac.html'>Chinese Zodiac Sign Reading</a></button>
+            <button><a href='chinese-zodiac-relationship.html'>Chinese Zodiac Sign Relationships Reading</a></button>
+            <button><a href='star-sign-relationship.html'>Star Sign Relationships Reading</a></button>
+            <button><a href='fortune-telling.html'>Fortune telling</a></button>
+        </div>
+    </div>
+
+    <div class="result">
+        <div id="result"></div>
+        <button><a href='star-sign.html'>Read Again</a></button>
+    </div>  
+
+</body>
+</html>

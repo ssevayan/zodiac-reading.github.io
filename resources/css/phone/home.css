@@ -1,0 +1,94 @@
+@media only screen and (max-width: 599px){
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        background: linear-gradient(to top, transparent, rgba(66, 122, 168)), url("../../media/images/MainBackG.jpg");
+        /*background-image: url("../../media/images/MainBackG.jpg");*/
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed; /* Fixed background */
+    }
+    
+    .title {
+        margin-top: 5%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    
+    .title p {
+        font-family: 'Roboto', sans-serif;
+        font-size: 25px;
+        font-weight: 900;
+        color:rgb(129, 232, 255);
+    }
+    
+    .title span {
+        color:fuchsia;
+    }
+    
+    /*.buttons {
+        margin-top: 10%;
+        margin-bottom: 5%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    
+    button {
+        border: none;
+        margin-right: 2%;
+        margin-bottom: 25px;
+        background-color: transparent;
+    }
+    
+    button a {
+        padding: 10px;
+        font-size: 18px;
+        font-weight: 800;
+        font-family: 'Roboto', sans-serif;
+        text-decoration: none;
+        color:rgb(185, 242, 255);
+        border: 1px solid rgb(129, 232, 255);
+    } */
+
+    .buttons {
+        margin-top: 10%;
+        margin-bottom: 5%;
+        margin-left: 5%;
+        margin-right: 5%;
+        display: flex;
+        flex-direction: column; /* Set buttons to be laid out vertically */
+    }
+    
+    button {
+        border: none;
+        background-color: transparent;
+        flex: 1;
+        margin-bottom: 10px; /* Add margin between buttons */
+    }
+    
+    button a {
+        display: block;
+        padding: 8px 1%; /* Set the padding to create button size */
+        font-size: 20px;
+        font-weight: 800;
+        /*font-family:'Mooli', sans-serif;*/
+        font-family: 'Roboto', sans-serif;
+        text-decoration: none;
+        color: rgb(34, 94, 143);
+        background-color: rgba(129, 232, 255, 0.57);
+        border-radius: 15px;
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center; /* Center text horizontally */
+    }
+    
+    .buttons span {
+        color:fuchsia;
+        font-size: 25px;
+    }
+}
+
